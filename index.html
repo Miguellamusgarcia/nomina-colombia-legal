@@ -136,7 +136,7 @@
   <ul>
     <li><strong>No pide cuenta ni registro.</strong> No hay usuario ni contraseña en ningún servidor.</li>
     <li><strong>No pide permisos del sistema</strong>: ni cámara, ni ubicación, ni contactos, ni micrófono, ni almacenamiento externo, ni calendario.</li>
-    <li><strong>No tiene publicidad ni rastreadores.</strong> Ninguna red publicitaria, ninguna herramienta de analítica, ningún SDK de terceros que observe tu uso.</li>
+    <li><strong>No tiene publicidad ni analítica.</strong> Ninguna red publicitaria y ninguna herramienta que mida qué haces dentro del app ni cuánto lo usas. Tampoco hay seguimiento entre aplicaciones ni sitios web. Sí hay un reportador de fallas, y va explicado en el numeral 5.3.</li>
     <li><strong>No vende, alquila ni comparte tu información</strong> con nadie, para ningún fin.</li>
     <li><strong>No accede a tus cuentas bancarias.</strong> Los saldos de «Ingresos y gastos» salen solo de lo que tú anotes a mano.</li>
     <li><strong>No manda correos por su cuenta.</strong> Cuando el app «envía» algo, abre tu aplicación de correo con el mensaje escrito: tú decides si lo mandas.</li>
@@ -196,7 +196,45 @@
     </p>
   </div>
 
-  <h3>5.3 Pagos</h3>
+  <h3>5.3 Cuando el app se cierra con un error</h3>
+  <p>
+    Si el app falla, se envía un informe técnico a <strong>Sentry</strong>, que
+    actúa como encargado del tratamiento. Sirve para enterarnos del error y
+    corregirlo sin esperar a que alguien lo cuente.
+  </p>
+  <p><strong>Qué contiene el informe:</strong></p>
+  <ul>
+    <li>el mensaje del error y su pila de llamadas (qué línea del programa falló);</li>
+    <li>el modelo de teléfono y la versión del sistema operativo;</li>
+    <li>la versión del app.</li>
+  </ul>
+  <p>
+    <strong>Qué se apagó a propósito para que no viaje.</strong> Un reportador de
+    fallas trae de fábrica opciones que en un app de nómina serían una fuga de
+    datos, y están desactivadas de forma explícita:
+  </p>
+  <ul>
+    <li><strong>captura de pantalla</strong> — sería una foto de tu salario;</li>
+    <li><strong>árbol de la interfaz</strong> — sería lo mismo, con los textos de la pantalla;</li>
+    <li><strong>grabación de sesión</strong> — sería lo mismo, en vídeo;</li>
+    <li><strong>registros de consola</strong> — podrían arrastrar cualquier cosa.</li>
+  </ul>
+  <p>
+    Tampoco hay medición de rendimiento, así que no se traza por qué pantallas pasas.
+  </p>
+  <p>
+    <strong>No viaja nada que hayas escrito</strong>: ni tu salario, ni tu nombre,
+    ni tu empresa, ni tus cálculos, ni tus movimientos. Política de privacidad de
+    Sentry: <a href="https://sentry.io/privacy/">sentry.io/privacy</a>
+  </p>
+  <div class="nota">
+    <p>
+      Este envío es distinto de <strong>«Reportar una falla»</strong>, que está en
+      el numeral 5.2: ese lo mandas tú, con tus palabras, desde tu correo.
+    </p>
+  </div>
+
+  <h3>5.4 Pagos</h3>
   <p>
     Cuando la suscripción esté activa, el cobro lo procesan <strong>Google Play</strong>
     o la <strong>App Store</strong> según tu tienda. El app <strong>nunca recibe ni
@@ -212,8 +250,8 @@
     y no hay ninguna decisión automatizada que produzca efectos jurídicos sobre ti.
   </p>
   <p>
-    La información técnica del numeral 5.1 se usa <strong>solo</strong> para
-    entregarte actualizaciones.
+    La información técnica de los numerales 5.1 y 5.3 se usa <strong>solo</strong>
+    para entregarte actualizaciones y para corregir errores del app. Para nada más.
   </p>
 
   <h2>7. Cuánto tiempo se conservan</h2>
@@ -247,7 +285,7 @@
   </table>
   </div>
   <p>
-    Para lo del numeral 5.1, o para cualquier consulta o reclamo, escribe a
+    Para lo de los numerales 5.1 y 5.3, o para cualquier consulta o reclamo, escribe a
     <a href="mailto:miguel@ardepro.co">miguel@ardepro.co</a>. Responderemos las
     consultas en <strong>diez (10) días hábiles</strong> y los reclamos en
     <strong>quince (15) días hábiles</strong>, conforme a los artículos 14 y 15 de la

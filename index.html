@@ -164,11 +164,25 @@
     <a href="https://expo.dev/privacy">expo.dev/privacy</a>
   </p>
   <p>
-    Por este mecanismo, la aplicación instalada declara los dos permisos de red del
-    sistema (<code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code>), que se usan
-    <strong>solo</strong> para esto. <strong>Ningún otro permiso.</strong> Los
-    permisos opcionales que trae por defecto la plantilla de compilación están
-    bloqueados de forma explícita para que no lleguen a la aplicación instalada.
+    <strong>Los permisos que declara el app, y para qué sirve cada uno.</strong> Son
+    tres, y ninguno pide autorización tuya porque ninguno da acceso a nada personal:
+  </p>
+  <div class="tabla-envoltorio">
+  <table>
+    <thead><tr><th>Permiso</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td>INTERNET</td><td>Consultar si hay actualización y enviar informes de fallas.</td></tr>
+      <tr><td>ACCESS_NETWORK_STATE</td><td>Saber si hay conexión antes de intentarlo.</td></tr>
+      <tr><td>com.android.vending.BILLING</td><td>Cobrar la suscripción a través de Google Play.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    <strong>Ningún otro.</strong> El app no pide acceso a archivos, cámara,
+    ubicación, contactos, micrófono, calendario ni a superponerse a otras
+    aplicaciones. Los permisos opcionales que trae por defecto la plantilla de
+    compilación están bloqueados de forma explícita para que no lleguen a la
+    aplicación instalada.
   </p>
 
   <h3>5.2 Lo que tú decides mandar</h3>
